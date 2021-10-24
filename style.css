@@ -111,7 +111,7 @@ p {
 @media only screen and (max-width: 700px) {
   html {
     font-size: 62.5%;
-    overflow: clip;
+    overflow-x: clip;
   }
   /* [class*="first"] {
         flex-direction: column;
@@ -131,7 +131,7 @@ p {
     flex-direction: column-reverse;
   }
   .first {
-    height: 80vh;
+    height: 60vh;
     background: rgb(21, 21, 21);
     color: white;
     display: flex;
@@ -142,6 +142,13 @@ p {
   }
   header .logo {
     margin: 3%;
+    left: 3%;
+  }
+  header {
+    height: 6vh;
+  }
+  .into {
+    margin-top: 10vh;
   }
   /* .first img {
     top: 28vh;

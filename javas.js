@@ -1,47 +1,47 @@
-// gsap.to('.logo',{x:200})
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '80%',
-        scrub: 1,
-    },
-});
+const tl = gsap.timeline({defaults:{ease:'power1.out'}});
 
-let tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '60%',
-        scrub: 1,
-    },
-});
+tl.to('.text',{y:'0%', duration: 1});
+tl.to('.slider',{y:'-100%',duration:1.5});
+tl.to('.intro',{y:'-100%',duration: 1}, '-=1')
+tl.fromTo('header',{opacity: 0},{opacity: 1,duration: 0.3});
 
 
 
-let tl4 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '100%',
-        scrub: 1,
-    },
-});
-
-tl.fromTo('.sliding-text', { y: 0 }, { y: -400 });
-// tl.to('.logo', {opacity: 0}); 
-tl2.fromTo('.logo', { scale: 6 }, { scale: 1, top: '2rem', left: '3rem', x: '50%', y: '50%' });
-tl4.fromTo('.square', { left: '70%' }, { left: '100%', opacity: 0, rotation: 90 });
 
 
 
-let tl3 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: '0%',
-        end: '400%',
-        scrub: 1,
-        pin: true,
-        pinSpacing: false,
-    },
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener('scroll',function(){
+    var header = document.querySelector('header');
+    header.classList.toggle("sticky", window.scrollY>0);
+
+})
